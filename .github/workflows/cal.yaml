@@ -1,0 +1,9 @@
+- name: calculator testing
+  uses: actions/checkout@v2
+  with:
+     repository: smickey/Pytest_for_Calculator
+     #path: <folder of choice>
+     token: ${{ secrets.<token_name> }}
+- name: Show hidden files
+  run: |
+     ls
