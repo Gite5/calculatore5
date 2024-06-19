@@ -19,6 +19,7 @@ jobs:
           run: |
              ls
              pwd
+             cp calculator.py /home/runner/work/
 
         - name: calculator testing
           uses: actions/checkout@v2
@@ -29,6 +30,7 @@ jobs:
         - name: Show files
           run: |
              ls
+             mv /home/runner/work/calculator.py .
              pwd
 
         - name: Set up Python 3.8
