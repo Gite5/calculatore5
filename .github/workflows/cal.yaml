@@ -14,6 +14,10 @@ jobs:
         - name: checkout my codes
           uses: actions/checkout@v2
 
+        - name: Show files
+          run: |
+             ls
+
         - name: calculator testing
           uses: actions/checkout@v2
           with:
