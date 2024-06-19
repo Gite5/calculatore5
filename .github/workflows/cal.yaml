@@ -17,6 +17,7 @@ jobs:
         - name: Show files
           run: |
              ls
+             pwd
 
         - name: calculator testing
           uses: actions/checkout@v2
@@ -27,6 +28,7 @@ jobs:
         - name: Show files
           run: |
              ls
+             pwd
 
         - name: Set up Python 3.8
           uses: actions/setup-python@v3
