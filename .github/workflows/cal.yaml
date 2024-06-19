@@ -17,9 +17,9 @@ jobs:
         - name: calculator testing
           uses: actions/checkout@v2
           with:
-             repository: smickey/Pytest_for_Calculator
+             repository: smickey/pytest_for_calculator
              #path: <folder of choice>
-             token: ${{ secrets.<token_name> }}
-        - name: Show hidden files
+             
+        - name: Show files
           run: |
              ls
