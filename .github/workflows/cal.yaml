@@ -1,9 +1,25 @@
-- name: calculator testing
-  uses: actions/checkout@v2
-  with:
-     repository: smickey/Pytest_for_Calculator
-     #path: <folder of choice>
-     token: ${{ secrets.<token_name> }}
-- name: Show hidden files
-  run: |
-     ls
+name: calculator testing
+on:
+    push:
+        branches: [main]
+jobs:
+    build:
+
+        name: Build my virtual OS
+
+        runs-on: Ubuntu-latest
+
+        steps:
+
+        - name: checkout my codes
+          uses: actions/checkout@v2
+
+        - name: calculator testing
+          uses: actions/checkout@v2
+          with:
+             repository: smickey/Pytest_for_Calculator
+             #path: <folder of choice>
+             token: ${{ secrets.<token_name> }}
+        - name: Show hidden files
+          run: |
+             ls
