@@ -48,6 +48,7 @@ jobs:
             pytest test_calculator.py
             
     release:
+        permissions: write-all
         name: Create release
         runs-on: ubuntu-latest
         steps:
