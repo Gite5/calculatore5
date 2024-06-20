@@ -1,7 +1,9 @@
-name: calculator testing
+name: calculator testing and create release
 on:
     push:
         branches: [main]
+        tags:
+          - '*.*.*'
 jobs:
     build:
 
@@ -46,14 +48,7 @@ jobs:
           run: |
             pytest test_calculator.py
 
-name: Create Release
 
-on:
-  push:
-    tags:
-      - '*.*.*'
-
-jobs:
   release:
     name: Create release
     runs-on: ubuntu-latest
