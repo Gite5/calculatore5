@@ -12,6 +12,17 @@ jobs:
 
         steps:
 
+        - name: calculator testing
+          uses: actions/checkout@v4
+          with:
+             repository: smickey/pytest_for_calculator
+
+        - name: Show files
+          run: |
+             ls
+             cp test_calculator.py /home/runner/work/
+             pwd
+
         - name: checkout my codes
           uses: actions/checkout@v4
           
@@ -20,21 +31,7 @@ jobs:
           run: |
              ls
              pwd
-             cp calculator.py /home/runner/work/
-             cp CHANGELOG.md /home/runner/work/
-
-        - name: calculator testing
-          uses: actions/checkout@v4
-          with:
-             repository: smickey/pytest_for_calculator
-             
-             
-        - name: Show files
-          run: |
-             ls
-             mv /home/runner/work/calculator.py .
-             mv /home/runner/work/CHANGELOG.md .
-             pwd
+             mv /home/runner/work/test_calculator.py .
 
         - name: Set up Python 3.8
           uses: actions/setup-python@v4
