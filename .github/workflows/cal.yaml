@@ -21,6 +21,7 @@ jobs:
              ls
              pwd
              cp calculator.py /home/runner/work/
+             cp CHANGELOG.md /home/runner/work/
 
         - name: calculator testing
           uses: actions/checkout@v4
@@ -32,6 +33,7 @@ jobs:
           run: |
              ls
              mv /home/runner/work/calculator.py .
+             mv /home/runner/work/CHANGELOG.md .
              pwd
 
         - name: Set up Python 3.8
